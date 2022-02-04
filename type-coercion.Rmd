@@ -1,6 +1,6 @@
 ---
 title: "Type coercion"
-author: "YOU"
+author: "Rachel Good"
 date: "`r Sys.Date()`"
 output: 
   html_document: 
@@ -12,60 +12,60 @@ output:
 ```{r}
 c(1, 1L, "C")
 ```
-
+Concatenated variables turned to character
 ```{r}
 1
 1L
 "C"
 ```
-
+double, integer, character
 ```{r}
 typeof(c(1, 1L, "C"))
 ```
-
+concatenated character
 -   `c(1L / 0, "A")`
 
 ```{r}
 c(1L / 0, "A")
 ```
-
+concatenated character
 ```{r}
 typeof(1L)
 typeof(0)
 typeof(1L/0)
 typeof("A")
 ```
-
+integer, double, error, character
 ```{r}
 typeof(c(1L / 0, "A"))
 ```
-
+concatenated character
 -   `c(1:3, 5)`
 
 ```{r}
 c(1:3, 5)
 ```
-
+concatenated doubles
 ```{r}
 typeof(1:3)
 typeof(5)
 ```
-
+double, integer
 ```{r}
 typeof(c(1:3, 5))
 ```
-
+concatenated double
 -   `c(3, "3+")`
 
 ```{r}
 c(3, "3+")
 ```
-
+concatenated character
 ```{r}
 typeof(3)
 typeof("3+")
 ```
-
+integer, character
 ```{r}
 typeof(c(3, "3+"))
 ```
@@ -74,15 +74,15 @@ typeof(c(3, "3+"))
 ```{r}
 c(NA, TRUE)
 ```
-
+concatenated logical
 ```{r}
 typeof(NA)
 typeof(TRUE)
 ```
-
+logical, logical
 ```{r}
 typeof(c(NA, TRUE))
 ```
-
+concatenated logical
 ## References {#references}
 1. Assignment Adapted from [Mine Cetinkaya-Rundel's Data Science in a Box](https://github.com/rstudio-education/datascience-box)
